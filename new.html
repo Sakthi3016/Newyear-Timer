@@ -1,0 +1,141 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<style> 
+body{ 
+    text-align: center; 
+    background: silver; 
+  font-family: yellow; 
+  font-weight: 100; 
+} 
+#example1 {
+  border: 5px dotted white;
+  padding: 0px;
+  background: pink;
+  background-clip: border-box;  
+  font-size: 20px;
+}
+
+
+h1{ 
+  color: #396; 
+  font-weight: 100; 
+  font-size: 40px; 
+  margin: 40px 0px 20px; 
+} 
+ #clockdiv{ 
+    font-family: algerian; 
+    color: yellow; 
+    display: inline-block; 
+    font-weight: 100; 
+    text-align: center; 
+    font-size: 50px; 
+} 
+.blink_me {
+	font-size: 100px;
+  animation: blinker 1s linear infinite;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#clockdiv > div{ 
+    padding: 20px; 
+    border-radius: 10px; 
+    background: orange; 
+    display: inline-block; 
+} 
+#clockdiv div > span{ 
+    padding: 15px; 
+    border-radius: 3px; 
+    background: black; 
+    display: inline-block; 
+} 
+h1 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+h2{
+	color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	}
+
+smalltext{ 
+    padding-top: 50px; 
+    font-size: 20px; 
+} 
+h3 {
+  background-image: url("paper.gif");
+  background-color: #cccccc;
+}
+
+
+</style> 
+</head> 
+<body> 
+<div id="example1">
+  <p><b>THE FINAL OF EVERY YEAR IS TIME TO SAY GOODBYE TO ONE YEAR AND WELCOME THE COMING OF A NEW ONE.A BLESSED YEAR MAY IT BE.</b></p>
+</div>
+
+<h1><br><b><font color="black">Countdown Clock 2020</font></b></h1> 
+
+
+<div id="clockdiv"> 
+  <div> 
+    <span class="days" id="day"></span> 
+    <div class="smalltext"><b><font color="white">Days</font></b></div> 
+  </div> 
+  <div> 
+    <span class="hours" id="hour"></span> 
+    <div class="smalltext"><b><font color="white">Hours</font></b></div> 
+  </div> 
+  <div> 
+    <span class="minutes" id="minute"></span> 
+    <div class="smalltext"><b><font color="white">Minutes</font></b></div> 
+  </div> 
+  <div> 
+    <span class="seconds" id="second"></span> 
+    <div class="smalltext"><b><font color="white">Seconds</font></b></div> 
+  </div> 
+</div> 
+  
+<p id="demo"></p> 
+  
+<script> 
+
+var deadline = new Date("jan 1, 2020 00:00:00").getTime(); 
+ 
+var x = setInterval(function() { 
+  
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("day").innerHTML =days ; 
+document.getElementById("hour").innerHTML =hours; 
+document.getElementById("minute").innerHTML = minutes;  
+document.getElementById("second").innerHTML =seconds;  
+if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "TIME UP"; 
+        document.getElementById("day").innerHTML ='0'; 
+        document.getElementById("hour").innerHTML ='0'; 
+        document.getElementById("minute").innerHTML ='0' ;  
+        document.getElementById("second").innerHTML = '0'; } 
+}, 1000); 
+</script> 
+
+<pre><b><div class="blink_me"><font size="20" color="cyan"><b><font color="yellow">H</font><font color="white">A</font><font color="yellow">P</font><font color="white">P</font><font color="yellow">Y</font> <font color="white">N</font><font color="yellow">E</font><font color="white">W</font> <font color="yellow">Y</font><font color="white">E</font><font color="yellow">A</font><font color="white">R</font><font type="white">-</font><font color="yellow">2</font><font color="white">0</font><font color="yellow">2</font><font color="white">0</font></div></b></font></b></pre>
+<h3><h2>"Life's not about expecting, hoping and wishing, it's about doing, being and becoming."</h2>
+</h3><br><br><br>
+<h2>																																								BY:SAKTHI.M</h2>
+ 
+<div id="example1">
+  <p></p>
+</div>
+</body> 
+</html> 
